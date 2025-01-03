@@ -1,0 +1,35 @@
+nVerwandte = input("Wie viel Verwandtschaft wird am Weihnachtsbaum erwartet?")
+if 0 < int(nVerwandte) < 5:
+    print("Glückspilz! Ein enstpanntes Fest Dir!")
+elif int(nVerwandte) < 1:
+    print("Allein sein soll niemand! Komm doch zum Essen!")
+else:
+    t = 1
+    Gluehwein = input("Hui, das klingt nach einer großen Feier! Brauchst Du Glühwein?")
+    if Gluehwein == "ja":
+        print("Hier, bitte. Prost! Auf ein besinnliches Fest!")
+        t += 1
+        nGluehwein = input("Noch eine?")
+        while nGluehwein == "ja" and 1 < t < 6 :
+                print (f"Das ist jetzt schon die {t}. Tasse - aber viel hilft viel!")
+                t += 1
+                nGluehwein = input("Noch eine?")
+        else:
+            if nGluehwein == "ja" and t > 5:
+                print("Oh, da ist der Topf schon leer. Einen Moment, ich koche neuen.")
+
+                n = 10
+                while n <= 80:
+                    if (n == 20):
+                        print("Lauwarm")
+                    elif (n == 40):
+                        print("Warm")
+                    elif (n == 60):
+                        print("Gleich ist es soweit")
+                    elif (n == 80):
+                        print("Und schon ist der Glühwein fertig. Hier, Deine Tasse!")
+                    else:
+                        print(f"{n} Grad")
+                    n = n + 10
+            else:
+                print("Vernünftig! Frohes Fest!")
